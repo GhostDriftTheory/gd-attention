@@ -1,5 +1,11 @@
 # GD-Attention Minimal Demo
 
+![Conceptual comparison between Softmax attention and GD-Attention](outputs/gd_attention_conceptual_diagram.png)
+
+Project page: [https://ghostdrifttheory.github.io/gd-attention/](https://ghostdrifttheory.github.io/gd-attention/)  
+Preprint: [https://zenodo.org/records/16757311](https://zenodo.org/records/16757311)  
+Organization: [https://ghostdriftresearch.com/](https://ghostdriftresearch.com/)
+
 Minimal public demo of **GD-Attention** with a small **Iris leave-one-out reference comparison**.
 
 This repository is a **research/demo implementation**, not a training library and not an optimized benchmark package.
