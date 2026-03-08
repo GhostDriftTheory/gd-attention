@@ -1,6 +1,8 @@
 # GD-Attention Minimal Demo
 
-![Conceptual comparison between Softmax attention and GD-Attention](GD-ATTENTION.png)
+<p align="center">
+  <img src="GD-ATTENTION.png" width="720">
+</p>
 
 Project page: [https://ghostdrifttheory.github.io/gd-attention/](https://ghostdrifttheory.github.io/gd-attention/)  
 Preprint: [https://zenodo.org/records/16757311](https://zenodo.org/records/16757311)  
