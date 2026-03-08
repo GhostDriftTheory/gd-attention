@@ -1,122 +1,55 @@
-# GD-Attention
+# GD-Attention: Iris comparison artifacts
 
-Minimal public implementation of **GD-Attention** with a small quantitative comparison against softmax attention.
+This repository snapshot contains **result artifacts only** for a small Iris comparison between a softmax baseline and GD-Attention.
 
-This repository is intended as a **research demo**, not as a production-ready training framework.  
-It accompanies the public preprint and exposes the core mechanism in the simplest possible form:
-
-- a semantic energy function
-- coherence-point computation
-- discrete key selection by minimum energy
-- a small out-of-sample comparison on the Iris dataset
-
-## What is GD-Attention?
-
-GD-Attention replaces softmax-style weighted blending with an **energy-based selection mechanism**.
-
-In this demo:
-
-- **Softmax attention** computes scores, normalizes them, and returns a weighted combination.
-- **GD-Attention** computes a semantic energy landscape, finds a coherence point for each query-key pair, and selects the key with the minimum energy.
-
-This makes the mechanism structurally closer to **discrete semantic selection** than to probability-weighted averaging.
-
-## Repository contents
+It currently includes:
 
 ```text
-main.py
-iris_comparison.py
-outputs/
-  fig1_gd_vs_softmax.png
-  fig2_energy_landscape.png
-  fig3_energy_slices.png
-  fig4_toy_classification.png
-  iris_quantitative_comparison.png
-  iris_comparison_metrics.csv
 README.md
+iris_quantitative_comparison.png
+iris_comparison_metrics.csv
 ```
 
-## Files
+## Included files
 
-### `main.py`
-Core minimal implementation and figure generation.
-
-It includes:
-
-- semantic energy definition
-- coherence point computation
-- GD-Attention selection
-- softmax baseline
-- toy visualizations
-
-Running this file produces the main qualitative figures.
-
-### `iris_comparison.py`
-Small quantitative comparison on the Iris dataset using **leave-one-out evaluation**.
+### `iris_quantitative_comparison.png`
+A summary figure for the leave-one-out Iris comparison.
 
 It reports:
-
 - classification accuracy
+- average runtime per sample (ms)
 - selection consistency
-- reference runtime per sample
 
-This script is included only as a **minimal supplementary comparison**.  
-It is not intended as a benchmark against optimized deep learning systems.
+### `iris_comparison_metrics.csv`
+A CSV file containing the numeric values shown in the figure.
 
-## How to run
+## Reported values
 
-### 1. Main demo
+From `iris_comparison_metrics.csv`:
 
-```bash
-python main.py
-```
+- **Accuracy**: Softmax `0.7733`, GD-Attention `0.9467`
+- **Average runtime per sample**: Softmax `0.059445 ms`, GD-Attention `5.113311 ms`
+- **Selection consistency**: Softmax `0.0600`, GD-Attention `0.0600`
 
-This generates:
+## Interpretation
 
-- `outputs/fig1_gd_vs_softmax.png`
-- `outputs/fig2_energy_landscape.png`
-- `outputs/fig3_energy_slices.png`
-- `outputs/fig4_toy_classification.png`
+This snapshot supports only the following narrow statement:
 
-### 2. Iris comparison
+> In this small leave-one-out Iris comparison, GD-Attention achieved higher accuracy than the softmax baseline, while requiring substantially more runtime per sample.
 
-```bash
-python iris_comparison.py
-```
+It does **not** support a general claim of runtime superiority.
+It also does **not** provide a broad benchmark across datasets, model scales, or optimized implementations.
 
-This generates:
+## Scope
 
-- `outputs/iris_quantitative_comparison.png`
-- `outputs/iris_comparison_metrics.csv`
+This repository snapshot is best read as a **small result bundle** for a toy comparison, not as a full implementation release.
 
-## Minimal quantitative result
+In particular:
+- source code is **not included** in this snapshot
+- no training library is included
+- no claim is made here about large-scale performance
 
-In the included leave-one-out Iris comparison, GD-Attention shows higher classification accuracy than the softmax baseline in this small fixed setting.
+## Note on selection consistency
 
-This result should be read carefully:
-
-- it is a **small fixed comparison**
-- it supports the claim that GD-Attention can behave differently from softmax in a discrete-selection setting
-- it does **not** establish general superiority
-- it is **not** evidence of faster runtime
-
-## Positioning
-
-This repository is best read as a public demonstration of the following point:
-
-> GD-Attention is not primarily a speedup method.  
-> It is an **energy-based semantic selection mechanism**.
-
-Its potential value lies in settings where the important question is not only *how much weight is distributed*, but also *which candidate is structurally selected*.
-
-## Status
-
-- public research demo
-- qualitative core figures included
-- minimal quantitative comparison included
-- not optimized for scale
-- not a training library
-
-## Citation
-
-If you refer to this repository, please cite the associated preprint alongside the code release.
+The current artifact reports selection consistency as `0.0600` for both methods.
+Any interpretation of that metric should therefore be made cautiously and should be tied to the exact evaluation definition used in the underlying experiment.
