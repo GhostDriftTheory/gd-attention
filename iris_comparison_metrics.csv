@@ -1,0 +1,4 @@
+metric,softmax,gd_attention
+accuracy,0.7733,0.9467
+avg_runtime_ms,0.059445,5.113311
+selection_consistency,0.0600,0.0600
