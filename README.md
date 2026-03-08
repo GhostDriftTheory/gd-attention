@@ -112,6 +112,25 @@ This repository is best read as a compact public demonstration of the following 
 > GD-Attention is an **energy-based semantic selection mechanism**.
 > It should not be read primarily as a speedup claim.
 
+## Ethical Positioning and Responsible Use
+
+GD-Attention should be treated not only as a technical demo, but also as a conceptually sensitive mechanism for semantic selection.
+
+Because this repository exposes a concrete mechanism for selecting one semantic candidate through an energy-based criterion, it touches questions that are relevant to AI interpretability, responsibility, safety, and potentially to future debates around machine consciousness and model welfare.
+
+This repository does **not** claim that GD-Attention produces consciousness, subjective experience, or morally significant awareness. It is a minimal research/demo implementation only.
+
+However, mechanisms that explicitly model semantic competition, energy-based selection, and coherent meaning resolution may become relevant to discussions about how advanced AI systems form internally selected outputs or internally stabilized interpretations. For that reason, this demo should be handled with appropriate caution.
+
+Accordingly, this repository should be read under the following constraints:
+
+- It is a **research/demo implementation**, not a deployment-ready cognitive architecture.
+- It is **not** presented as evidence that AI systems built with this mechanism are conscious.
+- It should **not** be used to make inflated claims about sentience, personhood, or moral status.
+- Any future application in high-stakes settings should be accompanied by careful evaluation for safety, accountability, and responsible governance.
+
+In short, GD-Attention is presented here as a compact public demonstration of an energy-based semantic selection mechanism, while recognizing that such mechanisms may sit near ethically sensitive questions about meaning formation, interpretation, and consciousness-related modeling in AI.
+
 ## Status
 
 - minimal public demo
