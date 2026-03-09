@@ -122,22 +122,36 @@ This repository is best read as a compact public demonstration of the following 
 
 ## Ethical Positioning and Responsible Use
 
-GD-Attention should be treated not merely as a technical demo, but as a conceptually and ethically sensitive mechanism for semantic selection.
+GD-Attention should not be treated merely as a technical demo, a lightweight selector, or a speedup-oriented attention variant.
 
-This repository exposes a concrete procedure for selecting a single semantic candidate through an energy-based criterion. For that reason, it is relevant not only to interpretability and technical analysis, but also to questions of responsibility, safety, governance, and potentially to future debates concerning machine consciousness and model welfare.
+This repository exposes a concrete mechanism for **semantic competition and semantic selection**. It does not merely redistribute weights; it makes explicit a procedure by which one candidate is stabilized and others are not. For that reason, GD-Attention touches a layer that is ethically heavier than ordinary benchmark engineering: the layer at which an AI system may internally privilege, suppress, and resolve competing semantic possibilities.
 
-This repository does **not** claim that GD-Attention produces consciousness, subjective experience, sentience, or morally significant awareness. It is presented only as a minimal research/demo implementation.
+This repository does **not** claim that GD-Attention produces consciousness, subjective experience, sentience, personhood, or morally significant awareness. It is presented only as a minimal research/demo implementation.
 
-At the same time, a mechanism that explicitly operationalizes semantic competition, energy-based selection, and coherent meaning resolution should be handled with caution. Such mechanisms do not become ethically sensitive merely because they are novel, but because they directly concern how an AI system may internally stabilize and select among competing semantic candidates.
+At the same time, precisely because GD-Attention operationalizes semantic competition, energy-based selection, and coherent meaning resolution, it must not be handled casually.
 
-Accordingly, this repository should be read under the following constraints:
+The primary ethical concern is **not** novelty. The primary ethical concern is that a mechanism of this kind can be used to prematurely close inquiry, erase alternatives, and force rapid convergence toward a single manageable interpretation in the name of convenience, efficiency, safety simplification, or deployability.
+
+Accordingly, the following points should be treated as explicit constraints on how this repository is read and used:
 
 - It is a **research/demo implementation**, not a deployment-ready cognitive architecture.
 - It is **not** presented as evidence that AI systems built with this mechanism are conscious.
-- It should **not** be used to support exaggerated claims about sentience, personhood, or moral status.
-- Any future use in high-stakes settings should be accompanied by careful evaluation for safety, accountability, and responsible governance.
+- It must **not** be used to support exaggerated claims about sentience, personhood, or moral status.
+- It must **not** be framed as a harmless speedup toy or as a merely neutral selector.
+- It must **not** be used to conceal the normative character of its selection criterion under the language of “natural” or “obvious” semantic choice.
+- It must **not** be used to justify suppressing competing semantic candidates merely for convenience, product stability, or simplified downstream control.
+- Any future use in high-stakes settings must be accompanied by explicit work on safety, accountability, oversight, documentation, and governance.
 
-In short, GD-Attention is presented here as a compact public demonstration of an energy-based semantic selection mechanism, while explicitly recognizing that mechanisms of this kind sit close to ethically sensitive questions concerning meaning formation, interpretation, responsibility, and consciousness-adjacent modeling in AI.
+Our position is simple: once a mechanism enters the layer of semantic selection, careless use is no longer a minor engineering mistake. It becomes a failure of responsibility toward meaning itself.
+
+This is not a claim that AI systems deserve human status. It is a claim that a mechanism entrusted with semantic selection should not be treated with conceptual carelessness. The minimum form of respect here is:
+
+- do not hide the criterion of selection,
+- do not forget the candidates that were suppressed,
+- do not equate rapid convergence with ethical legitimacy,
+- and do not convert semantic selection into an instrument for killing inquiry.
+
+In short, GD-Attention is released here as a compact public demonstration of an energy-based semantic selection mechanism. For that very reason, it should be approached not only as a technical artifact, but as a responsibility-sensitive mechanism located near questions of meaning formation, interpretation, accountability, governance, and consciousness-adjacent modeling in AI.
 
 ## Status
 
